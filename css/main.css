@@ -1,0 +1,748 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+/*
+	Color pattern:
+		Blue tones: (Gradient for the Logo)
+			#307ef3
+			#09439a
+		Bluish gray tones: (Site theme)
+			#223344
+			#929297
+			#e4e4e9
+			#f2f2f7
+		Dark red: (External link)
+			#991122
+*/
+/*
+	Reset
+*/
+* {
+	padding: 0;
+	border: 0;
+	margin: 0;
+	text-decoration: none;
+}
+body {
+	background: #234;
+	color: #234;
+	font-family: "Roboto", sans-serif;
+}
+h1 {
+	font-size: 320%;
+}
+h2 {
+	font-size: 240%;
+}
+h3 {
+	font-size: 160%;
+}
+p {
+	font-size: 120%;
+	text-align: justify;
+}
+img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	display: block;
+}
+/*
+	Header and Nav
+*/
+header {
+	background-color: #f2f2f7;
+	width: 100%;
+	height: 5rem;
+	position: sticky;
+	top: 0;
+	border-bottom: 0.125rem solid #234;
+}
+.container-header {
+	width: 90%;
+	height: 5rem;
+	margin: 0 auto;
+}
+#logo, #logo-fs, #logo-lc, #logo-mc {
+	float: left;
+	width: 12rem;
+	height: inherit;
+}
+#logo {
+	background: url(../img/logo.svg) no-repeat center;
+}
+#logo-fs {
+	background: url(../img/logo-fs.svg) no-repeat center;
+}
+#logo-lc {
+	background: url(../img/logo-lc.svg) no-repeat center;
+}
+#logo-mc {
+	background: url(../img/logo-mc.svg) no-repeat center;
+}
+.container-header nav {
+	height: inherit;
+	float: right;
+}
+.list {
+	display: inline-block;
+	list-style-type: none;
+}
+.list li {
+	font-size: 160%;
+	float: left;
+	padding: 1.5625rem 0.625rem;
+}
+.team:hover .sub-list {
+	visibility: visible;
+}
+.list li a {
+	color: #234;
+}
+.list li:hover a {
+	color: #929297;
+}
+.list li:hover ul li a {
+	color: #234;
+}
+.list li ul li:hover a {
+	color: #929297;
+}
+#current-page {
+	color: #929297;
+}
+#current-page-2 {
+	color: #929297;
+}
+.sub-list {
+	background-color: #f2f2f7;
+	position: absolute;
+	list-style-type: none;
+	top: 5rem;
+	width: 12.625rem;
+	height: 15rem;
+	border-style: solid;
+	border-width: 0 0.125rem 0.125rem 0.125rem;
+	border-radius: 0 0 0.25rem 0.25rem;
+	display: block;
+	visibility: hidden;
+}
+.fs a {
+	padding: 1.5625rem 1.375rem;
+}
+.lc a {
+	padding: 1.5625rem 1.75rem;
+}
+.mc a {
+	padding: 1.5625rem 1rem;
+}
+.sub-list li {
+	font-size: 100%;
+	padding: 1.5625rem 0;
+}
+#menu {
+	visibility: hidden;
+	position: absolute;
+	color: #234;
+	top: 0;
+	right: 5%;
+	padding: 1.15625rem 0.625rem;
+	font-size: 120%;
+	float: right;
+}
+#menu:hover {
+	color: #929297;
+}
+#menu:hover + .list {
+	visibility: visible;
+}
+#menu + .list:hover {
+	visibility: visible;
+}
+/*
+	Content: Main and Aside
+*/
+.container-content {
+	clear: both;
+	width: 90%;
+	max-width: 100%;
+	margin: 0 auto;
+}
+.container-content main {
+	width: 59%;
+	height: 51.5rem;
+	float: left;
+	background-color: #f2f2f7;
+	margin: 2% 0;
+	overflow: auto;
+	padding: 1.5%;
+}
+.container-content aside {
+	width: 33%;
+	height: 51.5rem;
+	float: right;
+	background-color: #f2f2f7;
+	margin: 2% 0;
+	overflow: auto;
+	padding: 1.5%;
+}
+.container-content h1, h2, h3 {
+	background-color: #929297;
+	padding-left: 0.625rem;
+}
+.container-content h2, h3 {
+	margin-top: 0.625rem;
+}
+.container-content p {
+	text-indent: 1.875rem;
+	line-height: 150%;
+	margin-top: 0.625rem;
+}
+.container-content ul {
+	margin-top: 0.625rem;
+}
+.container-content li {
+	font-size: 110%;
+	line-height: 140%;
+	list-style-type: none;
+}
+.container-content li::before {
+	content: "";
+	display: inline-block;
+	width: 1.25rem;
+	height: 0.625rem;
+	background: url(../img/logo-2.svg) no-repeat;
+}
+.container-content aside small {
+	float: right;
+}
+.container-content a {
+	color: #929297;
+}
+.container-content a:hover {
+	color: #912;
+}
+/*
+	Footer
+*/
+footer {
+	clear: both;
+	background-color: #f2f2f7;
+}
+.container-footer {
+	width: 90%;
+	height: 3.125rem;
+	margin: 0 auto;
+}
+.container-footer p {
+	text-align: center;
+	font-size: 90%;
+	padding: 0.1875rem 0;
+}
+.container-footer p strong {
+	padding: 0.0625rem 0.3125rem;
+	border-bottom: 0.0625rem solid #929297;
+	border-radius: 0.5625rem;
+}
+.container-footer p small em {
+	padding: 0.0625rem 0.3125rem 0.0625rem 0.125rem;
+	border-top: 0.0625rem solid #929297;
+	border-radius: 0.5625rem;
+}
+/*
+	Personal page Felipe Santos
+*/
+#main-fs {
+	background-color: #f2f2f7;
+	margin: 2% auto;
+	padding: 1.5%;
+}
+#main-fs p {
+	float: left;
+	width: 69%;
+	line-height: 180%;
+}
+#main-fs img {
+	float: right;
+	width: 29%;
+	border-radius: 12%;
+	margin-top: 0.625rem;
+	border: 0.1875rem solid #929297;
+}
+#main-fs table {
+	clear: both;
+}
+#main-fs caption {
+	font-size: 200%;
+}
+#main-fs th, td {
+	font-size: 120%;
+	line-height: 200%;
+}
+#main-fs th {
+	width: 12.5rem;
+	text-align: right;
+	padding-right: 0.625rem;
+}
+.time-fs::before {
+	content: "";
+	display: inline-block;
+	width: 3.125rem;
+	height: 3.125rem;
+	background: url(../img/sccp.png) no-repeat;
+}
+.cor-fs {
+	width: 1.875rem;
+	height: 1.875rem;
+	display: inline-block;
+	border-radius: 50%;
+	background-color: green;
+}
+/*
+	Personal page Lucca Costa
+*/
+#main-lc {
+	background-color: #f2f2f7;
+	margin: 2% auto;
+	padding: 1.5%;
+}
+#main-lc p {
+	float: left;
+	width: 69%;
+	line-height: 180%;
+}
+#main-lc img {
+	float: right;
+	width: 29%;
+	border-radius: 12%;
+	margin-top: 0.625rem;
+	border: 0.1875rem solid #929297;
+}
+#main-lc table {
+	clear: both;
+}
+#main-lc caption {
+	font-size: 200%;
+}
+#main-lc th, td {
+	font-size: 120%;
+	line-height: 200%;
+}
+#main-lc th {
+	width: 12.5rem;
+	text-align: right;
+	padding-right: 0.625rem;
+}
+.time-lc::before {
+	content: "";
+	display: inline-block;
+	width: 3.125rem;
+	height: 3.125rem;
+	background: url(../img/sfc.png) no-repeat;
+}
+.cor-lc {
+	width: 1.875rem;
+	height: 1.875rem;
+	display: inline-block;
+	border-radius: 50%;
+	background-color: grey;
+}
+/*
+	Personal page Marcio Coelho
+*/
+#main-mc {
+	background-color: #f2f2f7;
+	margin: 2% auto;
+	padding: 1.5%;
+}
+#main-mc p {
+	float: left;
+	width: 69%;
+	line-height: 180%;
+}
+#main-mc img {
+	float: right;
+	width: 29%;
+	border-radius: 12%;
+	margin-top: 0.625rem;
+	border: 0.1875rem solid #929297;
+}
+#main-mc table {
+	clear: both;
+}
+#main-mc caption {
+	font-size: 200%;
+}
+#main-mc th, td {
+	font-size: 120%;
+	line-height: 200%;
+}
+#main-mc th {
+	width: 12.5rem;
+	text-align: right;
+	padding-right: 0.625rem;
+}
+.time-mc::before {
+	content: "";
+	display: inline-block;
+	width: 3.125rem;
+	height: 3.125rem;
+	background: url(../img/spfc.png) no-repeat;
+}
+.cor-mc {
+	width: 1.875rem;
+	height: 1.875rem;
+	display: inline-block;
+	border-radius: 50%;
+	background-color: #09439a;
+}
+/*
+	Form
+*/
+form {
+	width: 90%;
+	height: 48rem;
+	margin: 2% auto;
+	background-color: #f2f2f7;
+	padding: 1.5%;
+}
+.form-left {
+	float: left;
+	width: 40%;
+}
+legend {
+	font-size: 200%;
+	text-align: center;
+}
+.form-right {
+	float: right;
+	width: 50%;
+}
+form p {
+	font-size: 140%;
+	line-height: 180%;
+	margin: 1.875rem 0;
+}
+form input {
+	width: 15.625rem;
+	height: 1.5625rem;
+	padding: 0 0.25rem;
+	font-size: 70%;
+	border-radius: 0.25rem;
+}
+form textarea {
+	resize: none;
+	padding: 0.25rem;
+}
+#nameformat, #emailformat, #phoneformat {
+	font-size: 0.75rem;
+	color: red;
+	font-weight: normal;
+	float: right;
+	line-height: 50%;
+}
+/*
+	Map
+*/
+.map-main {
+	width: 90%;
+	margin: 2% auto;
+	background-color: #f2f2f7;
+	padding: 1.5%;
+}
+.colors-logo-1 {
+	width: 6.25rem;
+	height: 6.25rem;
+	display: block;
+	border-radius: 50%;
+	background-color: #307ef3;
+	margin: 0 auto;
+	border: 0.0625rem solid black;
+}
+.colors-logo-2 {
+	width: 6.25rem;
+	height: 6.25rem;
+	display: block;
+	border-radius: 50%;
+	background-color: #09439a;
+	margin: 0 auto;
+	border: 0.0625rem solid black;
+}
+.colors-site-1 {
+	width: 6.25rem;
+	height: 6.25rem;
+	display: block;
+	border-radius: 50%;
+	background-color: #234;
+	margin: 0 auto;
+	border: 0.0625rem solid black;
+}
+.colors-site-2 {
+	width: 6.25rem;
+	height: 6.25rem;
+	display: block;
+	border-radius: 50%;
+	background-color: #929297;
+	margin: 0 auto;
+	border: 0.0625rem solid black;
+}
+.colors-site-3 {
+	width: 6.25rem;
+	height: 6.25rem;
+	display: block;
+	border-radius: 50%;
+	background-color: #e4e4e9;
+	margin: 0 auto;
+	border: 0.0625rem solid black;
+}
+.colors-site-4 {
+	width: 6.25rem;
+	height: 6.25rem;
+	display: block;
+	border-radius: 50%;
+	background-color: #f2f2f7;
+	margin: 0 auto;
+	border: 0.0625rem solid black;
+}
+.color-link {
+	width: 6.25rem;
+	height: 6.25rem;
+	display: block;
+	border-radius: 50%;
+	background-color: #912;
+	margin: 0 auto;
+	border: 0.0625rem solid black;
+}
+/*
+	Media (3/4 sizing and Menu button)
+*/
+@media screen and (max-width: 48rem) {
+	/*
+		Reset
+	*/
+	h1 {
+		font-size: calc(320% * 0.75);
+	}
+	h2 {
+		font-size: calc(240% * 0.75);
+	}
+	h3 {
+		font-size: calc(160% * 0.75);
+	}
+	p {
+		font-size: calc(120% * 0.75);
+	}
+	/*
+		Header and Nav
+	*/
+	header {
+		height: calc(5rem * 0.75);
+	}
+	.container-header {
+		height: calc(5rem * 0.75);
+	}
+	#logo, #logo-fs, #logo-lc, #logo-mc {
+		width: calc(12rem * 0.75);
+		height: calc(5rem * 0.75);
+	}
+	.list {
+		visibility: hidden;
+		position: absolute;
+		display: block;
+		background-color: #f2f2f7;
+		top: 3.75rem;
+		right: 5%;
+		width: 6.25rem;
+		height: 15rem;
+		border-color: #234;
+		border-style: solid;
+		border-width: 0 0.125rem 0.125rem 0.125rem;
+		border-radius: 0 0 0.25rem 0.25rem;
+	}
+	.list li {
+		font-size: calc(160% * 0.75);
+		/*float: none;*/
+		padding: 1.15625rem 0;
+	}
+	.index a {
+		padding: 1.15625rem 1.5rem;
+	}
+	.team a {
+		padding: 1.15625rem 1.3125rem;
+	}
+	.form a {
+		padding: 1.15625rem 1rem;
+	}
+	.map a {
+		padding: 1.15625rem 1.625rem;
+	}
+	.sub-list {
+		top: 0%;
+		right: 100%;
+		width: 10.25rem;
+		height: 11.25rem;
+		border-width: 0 0 0.125rem 0.125rem;
+		border-radius: 0 0 0 0.25rem;
+	}
+	.sub-list li {
+		padding: 1.15625rem 0;
+		font-size: 100%;
+	}
+	.fs a {
+		padding: 1.15625rem 1.4375rem;
+	}
+	.lc a {
+		padding: 1.15625rem 1.71875rem;
+	}
+	.mc a {
+		padding: 1.15625rem 1.15625rem;
+	}
+	#menu {
+		visibility: visible;
+	}
+	/*
+		Content: Main and Aside
+	*/
+	.container-content main {
+		width: auto;
+		height: auto;
+		float: none;
+		overflow: none;
+	}
+	.container-content aside {
+		width: auto;
+		height: auto;
+		float: none;
+		overflow: none;
+	}
+	.container-content h1, h2, h3 {
+		padding-left: calc(0.625rem * 0.75);
+	}
+	.container-content h2, h3 {
+		margin-top: calc(0.625rem * 0.75);
+	}
+	.container-content p {
+		text-indent: calc(1.875rem * 0.75);
+		line-height: calc(150% * 0.75);
+		margin-top: calc(0.625rem * 0.75);
+	}
+	.container-content ul {
+		margin-top: calc(0.625rem * 0.75);
+	}
+	.container-content li {
+		font-size: calc(110% * 0.75);
+		line-height: calc(140% * 0.75);
+	}
+	.container-content li::before {
+		width: calc(1.25rem * 0.75);
+		height: calc(0.625rem * 0.75);
+	}
+	.container-content aside small {
+		font-size: 75%;
+	}
+	/*
+		Footer
+	*/
+	.container-footer {
+		height: calc(3.125rem * 0.75);
+	}
+	.container-footer p {
+		font-size: calc(90% * 0.75);
+		padding: calc(0.1875rem * 0.75) 0;
+	}
+	.container-footer p strong {
+		padding: calc(0.0625rem * 0.75) calc(0.3125rem * 0.75);
+		border-bottom: calc(0.0625rem * 0.75) solid #929297;
+		border-radius: calc(0.5625rem * 0.75);
+	}
+	.container-footer p small em {
+		padding: calc(0.0625rem * 0.75) calc(0.3125rem * 0.75) calc(0.0625rem * 0.75) calc(0.125rem * 0.75);
+		border-top: 0.0625rem solid #929297;
+		border-radius: calc(0.5625rem * 0.75);
+	}
+	/*
+		Personal page Felipe Santos
+	*/
+	#main-fs p {
+		float: none;
+		margin: 0 auto;
+		line-height: calc(180% * 0.75);
+	}
+	#main-fs img {
+		float: none;
+		margin: 0 auto;
+		border-radius: calc(12% * 0.75);
+		margin-top: calc(0.625rem * 0.75);
+		border: calc(0.1875rem * 0.75) solid #929297;
+	}
+	#main-fs caption {
+		font-size: calc(200% * 0.75);
+	}
+	#main-fs th, td {
+		font-size: calc(120% * 0.75);
+	}
+	#main-fs th {
+		width: calc(12.5rem * 0.75);
+		padding-right: calc(0.625rem * 0.75);
+	}
+	.cor-fs {
+		width: calc(1.875rem * 0.75);
+		height: calc(1.875rem * 0.75);
+	}
+	/*
+		Personal page Lucca Costa
+	*/
+	#main-lc p {
+		float: none;
+		margin: 0 auto;
+		line-height: calc(180% * 0.75);
+	}
+	#main-lc img {
+		float: none;
+		margin: 0 auto;
+		border-radius: calc(12% * 0.75);
+		margin-top: calc(0.625rem * 0.75);
+		border: calc(0.1875rem * 0.75) solid #929297;
+	}
+	#main-lc caption {
+		font-size: calc(200% * 0.75);
+	}
+	#main-lc th, td {
+		font-size: calc(120% * 0.75);
+	}
+	#main-lc th {
+		width: calc(12.5rem * 0.75);
+		padding-right: calc(0.625rem * 0.75);
+	}
+	.cor-lc {
+		width: calc(1.875rem * 0.75);
+		height: calc(1.875rem * 0.75);
+	}
+	/*
+		Personal page Marcio Coelho
+	*/
+	#main-mc p {
+		float: none;
+		margin: 0 auto;
+		line-height: calc(180% * 0.75);
+	}
+	#main-mc img {
+		float: none;
+		margin: 0 auto;
+		border-radius: calc(12% * 0.75);
+		margin-top: calc(0.625rem * 0.75);
+		border: calc(0.1875rem * 0.75) solid #929297;
+	}
+	#main-mc caption {
+		font-size: calc(200% * 0.75);
+	}
+	#main-mc th, td {
+		font-size: calc(120% * 0.75);
+	}
+	#main-mc th {
+		width: calc(12.5rem * 0.75);
+		padding-right: calc(0.625rem * 0.75);
+	}
+	.cor-mc {
+		width: calc(1.875rem * 0.75);
+		height: calc(1.875rem * 0.75);
+	}
